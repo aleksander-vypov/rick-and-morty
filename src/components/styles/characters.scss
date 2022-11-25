@@ -1,0 +1,133 @@
+@import './mixins';
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 5%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid aquamarine;
+  border-radius: 6px;
+  justify-content: space-between;
+  overflow: hidden;
+  align-items: center;
+  min-width: 300px;
+  min-height: 478px;
+}
+
+.card:hover {
+  box-shadow: 0 0 2px #ffffff, 0 0 5px #ffffff, 0 0 10px #ffffff,
+    0 0 15px #ff00de, 0 0 20px #ff00de, 0 0 18px #ff00de, 0 0 19px #ff00de,
+    0 0 20px #ff00de;
+}
+
+button {
+  padding: 25px;
+  color: black;
+  background-color: aquamarine;
+  border: none;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #ff00de;
+  color: greenyellow;
+}
+
+.detail-container {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.detail-container::before {
+  background-color: #ff00de;
+  opacity: 0.2;
+}
+
+.detail-window {
+  position: relative;
+  z-index: 10;
+  width: 60%;
+  height: 80%;
+  background-color: #60e4b8;
+  border-radius: 16px;
+  display: flex;
+  overflow: hidden;
+  flex-wrap: wrap;
+  box-shadow: 0 0 2px #ffffff, 0 0 5px #ffffff, 0 0 10px #ffffff,
+    0 0 15px #ff00de, 0 0 20px #ff00de, 0 0 18px #ff00de, 0 0 19px #ff00de,
+    0 0 20px #ff00de;
+  animation: showBottom 0.5s;
+  @include respond-to(phones) {
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+    flex-direction: column;
+    align-items: center;
+    div {
+      img {
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+.hide {
+  animation: hideTop 0.5s;
+}
+
+@keyframes showBottom {
+  from {
+    bottom: -100%;
+  }
+  to {
+    bottom: 0;
+  }
+}
+
+@keyframes hideTop {
+  from {
+    top: 0;
+  }
+  to {
+    top: -100%;
+  }
+}
+
+.episodes {
+  max-height: 11em;
+  overflow-y: scroll;
+  width: 100%;
+  text-align: center;
+  @include respond-to(phones) {
+    display: none;
+  }
+}
+
+.info {
+  line-height: 2em;
+  margin: auto;
+}
+
+.episodes::-webkit-scrollbar {
+  width: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.test {
+  display: flex;
+}

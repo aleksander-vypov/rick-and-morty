@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  div {
+    border: 1px solid aqua;
+    padding: 2px;
+    width: 27px;
+    text-align: center;
+  }
+}
+
+.active {
+  background-color: aquamarine;
+}

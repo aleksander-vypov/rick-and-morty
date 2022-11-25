@@ -1,0 +1,30 @@
+@import './mixins';
+
+.search {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+  input {
+    box-shadow: 0 0 2px #ffffff, 0 0 5px #ffffff, 0 0 10px #ffffff,
+      0 0 15px aquamarine, 0 0 20px aquamarine, 0 0 18px aquamarine,
+      0 0 19px aquamarine, 0 0 20px aquamarine;
+    border: none;
+    width: 25%;
+    height: 2em;
+    font-size: x-large;
+    font-family: monospace;
+    color: #43866f;
+    text-align: center;
+    @include respond-to(phones) {
+      width: 70%;
+    }
+  }
+
+  input:focus {
+    outline: none;
+    box-shadow: 0 0 2px #ffffff, 0 0 5px #ffffff, 0 0 10px #ffffff,
+      0 0 15px #ea18ce, 0 0 20px #ea18ce, 0 0 18px #ea18ce, 0 0 19px #ea18ce,
+      0 0 20px #ea18ce;
+    color: #b8139e;
+  }
+}

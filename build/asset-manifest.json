@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/rick-and-morty/static/css/main.78973bcf.css",
+    "main.js": "/rick-and-morty/static/js/main.e3575c01.js",
+    "static/media/rick.png": "/rick-and-morty/static/media/rick.aed381a500e71c2edafd.png",
+    "static/media/rick-arrow.png": "/rick-and-morty/static/media/rick-arrow.9f2234b6dcf2d14246af.png",
+    "index.html": "/rick-and-morty/index.html",
+    "main.78973bcf.css.map": "/rick-and-morty/static/css/main.78973bcf.css.map",
+    "main.e3575c01.js.map": "/rick-and-morty/static/js/main.e3575c01.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.78973bcf.css",
+    "static/js/main.e3575c01.js"
+  ]
+}
