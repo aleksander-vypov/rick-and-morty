@@ -51,6 +51,7 @@ const Characters: FC = () => {
         active={active}
         setActive={setActive}
       />
+      <div className="pidor">ХУЕГРЫЗНЫЙ ГОВНОЕД</div>
     </>
   );
 };
