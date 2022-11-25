@@ -5,7 +5,7 @@ import {
   Route,
   Outlet,
   Link,
-  BrowserRouter as Router,
+  HashRouter as Router,
 } from 'react-router-dom';
 
 function App() {
