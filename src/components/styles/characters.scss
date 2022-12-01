@@ -127,30 +127,3 @@ button:hover {
 ul {
   list-style-type: none;
 }
-
-.test {
-  display: flex;
-}
-
-.pidor {
-  position: absolute;
-  height: 400px;
-  width: 400px;
-  top: 0;
-  left: -100%;
-  animation: pidor 15s ease-in-out infinite;
-  background-image: url(../../img/pidor.png);
-  text-align: center;
-}
-
-@keyframes pidor {
-  0% {
-    left: -100%;
-  }
-  50% {
-    left: 0;
-  }
-  100% {
-    left: -100%;
-  }
-}

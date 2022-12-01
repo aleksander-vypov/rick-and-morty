@@ -1,10 +1,12 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useContext, useEffect, useState } from 'react';
 import { ICharacter, IPaginationInfo } from '../../types/types';
 import CharactersList from '../Characters/CharactersList';
 import DetailPage from '../Characters/DetailPage';
 import Pagination from '../Pagination';
 import '../styles/characters.scss';
 import Search from '../Search';
+import { AppCtx } from '../AppContext';
+import { IAppContextInterface } from '../AppContext';
 
 const Characters: FC = () => {
   const [characters, setCharacters] = useState<ICharacter[]>([]);
@@ -31,6 +33,20 @@ const Characters: FC = () => {
     getPage('https://rickandmortyapi.com/api/character');
   }, []);
 
+  // const {
+  //   characters,
+  //   setCharacters,
+  //   info,
+  //   setInfo,
+  //   character,
+  //   setDetailInfo,
+  //   error,
+  //   setError,
+  //   active,
+  //   setActive,
+  //   getPage,
+  // } = useContext<IAppContextInterface>(AppCtx);
+
   return (
     <>
       <Search getPage={getPage} />
@@ -51,7 +67,6 @@ const Characters: FC = () => {
         active={active}
         setActive={setActive}
       />
-      <div className="pidor">ХУЕГРЫЗНЫЙ ГОВНОЕД</div>
     </>
   );
 };

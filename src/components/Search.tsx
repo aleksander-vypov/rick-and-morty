@@ -8,14 +8,13 @@ interface Search {
 const Search: FC<Search> = ({ getPage }) => {
   const [input, setInput] = useState<string>('');
 
-  useEffect(() => {
-    setTimeout(() => {
-      getPage(`https://rickandmortyapi.com/api/character/?name=${input}`);
-    }, 2000);
-  }, [input]);
-
   const onChange: ChangeEventHandler<HTMLInputElement> = (e) => {
     setInput(e.target.value);
+    setTimeout(() => {
+      if (input && getPage) {
+        getPage(`https://rickandmortyapi.com/api/character/?name=${input}`);
+      }
+    }, 2000);
   };
 
   return (
